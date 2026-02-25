@@ -1,6 +1,6 @@
 # UNICHAN MVP
 
-**$UNI** — [FdK7HCy7MPMnhFaeop7vBW9KW4XKL9DybCMSQ62Ppump](https://pump.fun/coin/FdK7HCy7MPMnhFaeop7vBW9KW4XKL9DybCMSQ62Ppump)
+**$UNI** — [6TibQCBeafQNE9oApnEyxE4ffxqUSdzJTnS6EL3Cpump](https://pump.fun/coin/6TibQCBeafQNE9oApnEyxE4ffxqUSdzJTnS6EL3Cpump)
 
 **UNICHAN** is an AI avatar that lives where you do: on your **desktop**, in **Telegram**, and in your **browser** (Chrome extension). She’s a helpful companion that can spot trades, analyze tokens, and act as a wallet with smart buy/sell management—all through one brain (BRAIN) and one character (Tamagotchi + extension).
 
