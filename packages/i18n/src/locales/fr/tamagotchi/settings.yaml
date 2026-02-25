@@ -1,0 +1,54 @@
+allow-visible-on-all-workspaces:
+  title: Visibilité sur tous les bureaux
+  description: Permet à la fenêtre d’être visible sur tous les bureaux, macOS uniquement.
+pages:
+  modules:
+    mcp-server:
+      description: Connecter et gérer le serveur MCP et ses outils
+      title: Serveur MCP
+  system:
+    sections:
+      section:
+        window-shortcuts:
+          title: Raccourcis clavier
+    window-shortcuts:
+      description: Modifier les raccourcis de la fenêtre.
+      title: Raccourcis de la fenêtre
+      toggle-move:
+        label: (Dés)Activer - Déplacement
+      toggle-resize:
+        label: (Dés)Activer - Redimensionnement
+      toggle-ignore-mouse-event:
+        label: (Dés)Activer - Ignorer les événements de la souris
+      press-keys: Appuyer sur les touches...
+    developer:
+      sections:
+        section:
+          use-window-mouse:
+            title: useWindowMouse
+            description: Test the Electron window cursor position
+devtools:
+  title: Developer
+  pages:
+    context-flow:
+      title: Context Flow
+    lag-visualizer:
+      title: Lag Visualizer
+    performance-visualizer:
+      title: Performance Visualizer
+      description: Toggle FPS/long task/memory overlay
+    markdown-stress:
+      title: Markdown Stress
+      description: Stress markdown parsing and rendering with heavy chat payloads
+    widgets-calling:
+      title: Widget Calling
+screen-capture:
+  permissions-prompt:
+    title: Screen Capture
+    description: To capture screens or windows, screen and system audio recording permissions are required.
+    open-preferences: Open System Preferences
+    dismiss: Dismiss
+    instructions:
+      step-1: Open "System Preferences", select "Privacy & Security" from the sidebar.
+      step-2: In the "Screen & System Audio Recording" and "System Audio Recording Only" sections, turn on the switches for AIRI.
+      step-2-note: If AIRI is not listed, please add it manually by clicking the "+" button and selecting AIRI from the Applications folder.

@@ -1,0 +1,33 @@
+{
+  "agents": {
+    "defaults": {
+      "model": "gpt-4o-mini",
+      "workspace": "~/.unichan/workspace",
+      "maxTokens": 8192,
+      "temperature": 0.7,
+      "personality": ""
+    }
+  },
+  "providers": {
+    "openai": { "apiKey": "" },
+    "anthropic": { "apiKey": "" },
+    "openrouter": { "apiKey": "" },
+    "deepseek": { "apiKey": "" },
+    "groq": { "apiKey": "" }
+  },
+  "gateway": {
+    "host": "0.0.0.0",
+    "port": 18790
+  },
+  "tools": {
+    "tokenResearch": {
+      "birdeyeApiKey": ""
+    },
+    "web": {
+      "search": {
+        "apiKey": "",
+        "maxResults": 5
+      }
+    }
+  }
+}

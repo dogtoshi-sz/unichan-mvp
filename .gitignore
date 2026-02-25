@@ -1,0 +1,76 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.pnpm-state/
+*.pyc
+__pycache__/
+.venv/
+venv/
+env/
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Build / output
+out/
+.output/
+.turbo/
+*.tsbuildinfo
+.cache/
+.next/
+.nuxt/
+.vite/
+coverage/
+.nyc_output/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+config.json
+.unichan/
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temp
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+tmp/
+temp/
+*.tmp
+
+# Electron
+*.exe
+*.dmg
+*.AppImage
+release/
+
+# Chrome extension
+*.crx
+*.pem
+.wxt/
+dist-*/
+
+# Python / Brain
+nanobot.egg-info/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Junk / accidental (Windows reserved name output)
+nul
+NUL

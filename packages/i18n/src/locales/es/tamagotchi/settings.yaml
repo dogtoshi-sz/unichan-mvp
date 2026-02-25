@@ -1,0 +1,54 @@
+allow-visible-on-all-workspaces:
+  title: Visibilidad Entre Espacios
+  description: Permitir que la ventana sea visible en todos los espacios de trabajo, solo macOS.
+pages:
+  modules:
+    mcp-server:
+      description: Conectar y gestionar servidor MCP y herramientas
+      title: Servidor MCP
+  system:
+    sections:
+      section:
+        window-shortcuts:
+          title: Atajos de Teclado
+    window-shortcuts:
+      description: Modificar los atajos de ventana.
+      title: Atajos de Ventana
+      toggle-move:
+        label: Alternar Mover
+      toggle-resize:
+        label: Alternar Redimensionar
+      toggle-ignore-mouse-event:
+        label: Alternar Ignorar Evento del Ratón
+      press-keys: Presionar Teclas...
+    developer:
+      sections:
+        section:
+          use-window-mouse:
+            title: useWindowMouse
+            description: Test the Electron window cursor position
+devtools:
+  title: Developer
+  pages:
+    context-flow:
+      title: Context Flow
+    lag-visualizer:
+      title: Lag Visualizer
+    performance-visualizer:
+      title: Performance Visualizer
+      description: Toggle FPS/long task/memory overlay
+    markdown-stress:
+      title: Markdown Stress
+      description: Stress markdown parsing and rendering with heavy chat payloads
+    widgets-calling:
+      title: Widget Calling
+screen-capture:
+  permissions-prompt:
+    title: Screen Capture
+    description: To capture screens or windows, screen and system audio recording permissions are required.
+    open-preferences: Open System Preferences
+    dismiss: Dismiss
+    instructions:
+      step-1: Open "System Preferences", select "Privacy & Security" from the sidebar.
+      step-2: In the "Screen & System Audio Recording" and "System Audio Recording Only" sections, turn on the switches for AIRI.
+      step-2-note: If AIRI is not listed, please add it manually by clicking the "+" button and selecting AIRI from the Applications folder.

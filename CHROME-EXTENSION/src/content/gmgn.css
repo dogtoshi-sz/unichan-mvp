@@ -1,0 +1,158 @@
+/* ── Token box hue (whole row tinted red / orange / green) ── */
+[data-openclaw-box] {
+  transition: background-color 0.3s ease;
+}
+
+[data-openclaw-verdict="good"] {
+  background-color: rgba(0, 255, 136, 0.08) !important;
+}
+
+[data-openclaw-verdict="caution"] {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+}
+
+[data-openclaw-verdict="danger"] {
+  background-color: rgba(255, 68, 68, 0.08) !important;
+}
+
+[data-openclaw-verdict="loading"] {
+  background-color: rgba(128, 128, 128, 0.04) !important;
+}
+
+/* ── GMGN inline token badges (Frontrun-style placement) ── */
+/* Badge sits right after the token link, inline with the name */
+
+.openclaw-gmgn-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  vertical-align: middle;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Good – green */
+.openclaw-gmgn-badge[data-verdict="good"] {
+  background: rgba(0, 255, 136, 0.15);
+  color: #00ff88;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+}
+
+/* Caution – amber */
+.openclaw-gmgn-badge[data-verdict="caution"] {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* Danger – red */
+.openclaw-gmgn-badge[data-verdict="danger"] {
+  background: rgba(255, 68, 68, 0.15);
+  color: #ff4444;
+  border: 1px solid rgba(255, 68, 68, 0.25);
+}
+
+/* Loading */
+.openclaw-gmgn-badge[data-verdict="loading"] {
+  background: rgba(128, 128, 128, 0.1);
+  color: rgba(128, 128, 128, 0.6);
+  border: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+/* ── Pink BUY button (next to existing Buy) ── */
+.openclaw-pink-buy {
+  margin-left: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: #ec4899;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.openclaw-pink-buy:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* ── pump.fun floating badge (single-token page) ── */
+.openclaw-pf-badge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: openclaw-slide-in 0.35s ease-out;
+}
+
+.openclaw-pf-badge[data-verdict="good"] {
+  background: rgba(0, 255, 136, 0.12);
+  color: #00ff88;
+  border-color: rgba(0, 255, 136, 0.15);
+}
+
+.openclaw-pf-badge[data-verdict="caution"] {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.15);
+}
+
+.openclaw-pf-badge[data-verdict="danger"] {
+  background: rgba(255, 68, 68, 0.12);
+  color: #ff4444;
+  border-color: rgba(255, 68, 68, 0.15);
+}
+
+.openclaw-pf-badge[data-verdict="loading"] {
+  background: rgba(128, 128, 128, 0.08);
+  color: rgba(128, 128, 128, 0.5);
+  border-color: rgba(128, 128, 128, 0.1);
+}
+
+.openclaw-pf-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.openclaw-pf-badge[data-verdict="loading"] .openclaw-pf-dot {
+  animation: openclaw-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes openclaw-slide-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes openclaw-pulse {
+  0%, 100% { opacity: 0.3; }
+  50%      { opacity: 0.8; }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "unichan-mvp",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.28.1",
+  "description": "UNICHAN MVP - AI Waifu: Brain + Tamagotchi + Chrome Extension",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "echo 'Run pnpm build:packages after install if needed'",
+    "dev:tamagotchi": "pnpm -rF @proj-airi/stage-tamagotchi run dev",
+    "dev:extension": "pnpm -rF @proj-airi/airi-plugin-web-extension run dev:watch",
+    "build:packages": "pnpm -rF \"./packages/*\" run build",
+    "build:tamagotchi": "pnpm -rF @proj-airi/stage-tamagotchi run app:build",
+    "build:extension": "pnpm -rF @proj-airi/airi-plugin-web-extension run build",
+    "kill:dev": "taskkill /IM electron.exe /F 2>nul || true"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.1.0",
+    "@types/node": "^24.10.9",
+    "tsdown": "catalog:",
+    "tsx": "^4.21.0",
+    "turbo": "^2.7.5",
+    "typescript": "~5.9.3"
+  }
+}
