@@ -1,6 +1,6 @@
 # Architecture
 
-High-level layout of UNICHAN-MVP and how the three main pieces connect.
+High-level layout of UNICHAN-MVP: an AI avatar that lives on your desktop, in Telegram, and in your browser—one companion that can spot trades, analyze tokens, and support wallet-style smart buy/sell. The three main pieces connect as follows.
 
 ---
 

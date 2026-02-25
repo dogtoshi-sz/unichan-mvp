@@ -8,9 +8,9 @@ __version__ = "0.2.0"
 __logo__ = "<3" if sys.platform == "win32" else "💖"
 
 # ASCII art banner (UNICHAN logo) — printed on onboard and gateway
+# Spacing tuned so U N I C H A N each read clearly (extra space in CHAN)
 __ascii_banner__ = r"""
-
-  _    _ _   _ _____ _____ _    _          _   _         __
+  _    _  _  _   _ _____   _____  _   _           _
  | |  | | \ | |_   _/ ____| |  | |   /\   | \ | |       /_ |
  | |  | |  \| | | || |    | |__| |  /  \  |  \| |  __   _| |
  | |  | | . ` | | || |    |  __  | / /\ \ | . ` |  \ \ / / |

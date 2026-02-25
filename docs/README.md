@@ -1,6 +1,6 @@
 # UNICHAN Documentation
 
-UNICHAN is a 3-piece AI companion: a **desktop avatar** (Tamagotchi), an **AI brain** (BRAIN), and a **Chrome extension** so she can see what you see and research the web with you.
+UNICHAN is an **AI avatar** that lives on your **desktop**, in **Telegram**, and in your **browser**. She’s a helpful companion that can spot trades, analyze tokens, and act as a wallet with smart buy/sell management—powered by one brain (BRAIN) and one character (Tamagotchi + Chrome extension).
 
 ---
 
@@ -14,9 +14,9 @@ UNICHAN is a 3-piece AI companion: a **desktop avatar** (Tamagotchi), an **AI br
 
 | Component | What it is | Role |
 |-----------|------------|------|
-| **Tamagotchi (UNICHAN Avatar)** | Desktop app (Electron) with a Live2D character | Sits on your desktop, reacts to you, uses the BRAIN for chat and tools. Voice and screen. |
-| **BRAIN** | Python nanobot | AI gateway: chat, token research, skills. HTTP API on port 18790 for Tamagotchi. |
-| **Chrome Extension** | Browser extension (WXT) | Sends page title, URL, video/subtitles to Tamagotchi so UNICHAN can “see” what you’re browsing. |
+| **Tamagotchi (UNICHAN Avatar)** | Desktop app (Electron) with a Live2D character | The avatar on your desktop: voice, chat, reactions. Uses the BRAIN for chat, token research, and trading tools. Also connects to Telegram and the browser extension. |
+| **BRAIN** | Python nanobot | AI gateway: chat, token research, trading skills, smart buy/sell logic. HTTP API on port 18790. |
+| **Chrome Extension** | Browser extension (WXT) | UNICHAN in your browser: sends page context so she can see what you see, spot trades, and analyze tokens. |
 
 ---
 

@@ -1,16 +1,16 @@
 # Tamagotchi (UNICHAN Avatar)
 
-The **Tamagotchi** is the UNICHAN avatar: a desktop app that shows a Live2D character, reacts to you, and connects to the BRAIN and the Chrome extension.
+The **Tamagotchi** is UNICHAN’s avatar on your **desktop**: a Live2D character that lives there, reacts to you, and connects to the BRAIN, the Chrome extension, and (optionally) Telegram. She’s your helpful companion—spot trades, analyze tokens, and wallet-style smart buy/sell management flow through her.
 
 ---
 
 ## What it is
 
 - **Electron app** (project: `TAMAGOTCHI/`, package: `@proj-airi/stage-tamagotchi`).
-- **Live2D character** on your desktop that reacts to user input.
+- **Live2D avatar** on your desktop that reacts to you and uses the BRAIN for chat, token research, and trading tools.
 - **Voice and text chat** — you talk or type; the avatar responds using the BRAIN (OpenClaw/nanobot).
-- **OpenClaw / nanobot interface** — the avatar can navigate and use the BRAIN’s interface (chat, tools, token research).
-- **WebSocket server** on port **6121** — the Chrome extension connects here and sends page/video/subtitle context so UNICHAN can “see” what you’re browsing.
+- **OpenClaw / nanobot interface** — the avatar can use the BRAIN’s skills (chat, token research, trading, smart buy/sell logic).
+- **WebSocket server** on port **6121** — the Chrome extension connects here and sends page/video/subtitle context so UNICHAN can “see” what you’re browsing and spot trades or analyze tokens.
 
 ---
 

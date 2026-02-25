@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide gets you from zero to a running UNICHAN: Brain, Tamagotchi (avatar), and Chrome extension.
+This guide gets you from zero to a running UNICHAN: an AI avatar on your desktop, in your browser, and (optionally) on Telegram—a helpful companion that can spot trades, analyze tokens, and support wallet-style smart buy/sell management.
 
 ---
 
@@ -84,8 +84,10 @@ In the extension popup:
 
 ## 5. Use it
 
-- **Browse** in Chrome. The extension sends page title, URL, and (if enabled) video/subtitle context to Tamagotchi.
-- **Talk or type** to UNICHAN in the Tamagotchi app. She gets your words plus the browser context and can answer about the page, research links (e.g. Twitter, websites), and use the BRAIN’s skills.
+- **Desktop** — Talk or type to UNICHAN in the Tamagotchi app; she’s your companion with voice and chat.
+- **Browser** — Browse in Chrome; the extension sends page context so she can see what you see, spot trades, analyze tokens, and answer questions.
+- **Telegram** — (Optional) Connect the BRAIN to Telegram so UNICHAN can help you there too.
+- One avatar, one brain: token research, smart buy/sell ideas, and wallet-style management flow through the same UNICHAN.
 
 If the extension shows **Connection error**, Tamagotchi isn’t running or the WebSocket URL is wrong. Fix that and click **Apply** again.
 

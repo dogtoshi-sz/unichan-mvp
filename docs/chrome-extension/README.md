@@ -1,14 +1,14 @@
 # Chrome Extension
 
-The **Chrome Extension** lets UNICHAN interact with the web: it sends what you’re looking at in the browser to the **desktop Tamagotchi** so she can see your screen and answer questions about it, research links (e.g. Twitter posts, websites), and do a deeper look into pages.
+The **Chrome Extension** is UNICHAN in your **browser**: it sends what you’re looking at (page, URL, video, subtitles) to the **desktop avatar** (Tamagotchi) so she can see what you see, spot trades, analyze tokens, and answer questions—all as one helpful companion with the same brain.
 
 ---
 
 ## What it is
 
 - **WXT** browser extension (project: `CHROME-EXTENSION/`).
-- **Does not show a character on the page** — Chat happens in the **Tamagotchi app** (desktop). The extension only sends **browser/screen context** to Tamagotchi.
-- **Connects to Tamagotchi** over **WebSocket** (default: `ws://localhost:6121/ws`). It does **not** connect to the BRAIN.
+- **UNICHAN in the browser** — She doesn’t show a character on the page; chat happens in the **Tamagotchi app** (desktop). The extension sends **browser context** so the avatar can spot trades, analyze tokens, and support smart buy/sell.
+- **Connects to Tamagotchi** over **WebSocket** (default: `ws://localhost:6121/ws`). It does **not** connect to the BRAIN directly.
 
 ---
 

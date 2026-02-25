@@ -1,15 +1,15 @@
 # BRAIN
 
-The **BRAIN** is UNICHAN’s lightweight **nanobot**: the AI agent that learns skills, runs the LLM, and interacts with the Tamagotchi (UNICHAN avatar). It exposes an HTTP gateway that the Tamagotchi uses for chat and tools.
+The **BRAIN** is UNICHAN’s **nanobot**: the AI agent that powers the avatar on desktop, Telegram, and browser. It exposes an HTTP gateway for chat, token research, trading tools, and smart buy/sell logic—so UNICHAN can spot trades, analyze tokens, and act as a helpful companion with wallet-style management.
 
 ---
 
 ## What it is
 
 - **Python package** in `BRAIN/` (nanobot + bridge).
-- **HTTP gateway** on port **18790** by default — Tamagotchi connects here for chat and token research.
+- **HTTP gateway** on port **18790** by default — Tamagotchi (and optionally Telegram) connect here for chat, token research, and trading tools.
 - **Skills** — Built-in skills (GitHub, weather, summarize, tmux, etc.) that the agent can use when you talk to UNICHAN.
-- **Token research** — Optional Birdeye (or similar) integration for the Chrome extension’s token lookup; the BRAIN serves this to Tamagotchi.
+- **Token research** — Birdeye (or similar) integration so UNICHAN can analyze tokens and spot trades; the BRAIN serves this to the avatar and the Chrome extension context.
 
 ---
 

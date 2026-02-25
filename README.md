@@ -1,6 +1,6 @@
 # UNICHAN MVP
 
-**UNICHAN** is your AI degen companion: a desktop avatar (Tamagotchi), an AI brain (BRAIN), and a Chrome extension that lets her see what you see. One system across Desktop → Chrome → (optional) Telegram.
+**UNICHAN** is an AI avatar that lives where you do: on your **desktop**, in **Telegram**, and in your **browser** (Chrome extension). She’s a helpful companion that can spot trades, analyze tokens, and act as a wallet with smart buy/sell management—all through one brain (BRAIN) and one character (Tamagotchi + extension).
 
 ---
 
@@ -8,9 +8,9 @@
 
 | Part | What it is | Role |
 |------|------------|------|
-| **BRAIN** | Python nanobot (AI agent) | HTTP gateway for Tamagotchi: chat, token research, tools. Runs on port **18790**. |
-| **TAMAGOTCHI** | Electron desktop app | Live2D character, voice, chat, screen. Connects to BRAIN and exposes WebSocket on port **6121** for the extension. |
-| **CHROME-EXTENSION** | Browser extension (WXT) | Sends page title, URL, video/subtitles to Tamagotchi so UNICHAN can “see” what you’re browsing. |
+| **BRAIN** | Python nanobot (AI agent) | HTTP gateway: chat, token research, trading tools, skills. Runs on port **18790**. |
+| **TAMAGOTCHI** | Electron desktop app | UNICHAN avatar on your desktop: Live2D character, voice, chat, screen. Connects to BRAIN and Telegram; exposes WebSocket on port **6121** for the browser extension. |
+| **CHROME-EXTENSION** | Browser extension (WXT) | UNICHAN in your browser: sends page context (title, URL, video/subtitles) to the avatar so she can see what you see, spot trades, and analyze tokens. |
 
 **Full documentation:** [docs/README.md](docs/README.md) — getting started, each component, and architecture.
 
@@ -85,8 +85,10 @@ In Chrome:
 
 ### 5. Use it
 
-- Browse in Chrome — the extension sends the page to UNICHAN.
-- Talk or type in the Tamagotchi app — she sees what you see and can answer, research links, and use the BRAIN.
+- **Desktop** — Talk or type to UNICHAN in the Tamagotchi app; she’s your companion with voice and chat.
+- **Browser** — Use the Chrome extension; she sees what you’re browsing and can spot trades, analyze tokens, and answer questions about the page.
+- **Telegram** — (Optional) Connect the BRAIN to Telegram so UNICHAN can help you there too.
+- One avatar, one brain: token research, smart buy/sell ideas, and wallet-style management flow through the same UNICHAN.
 
 ---
 
@@ -112,7 +114,7 @@ UNICHAN-MVP/
 | Chrome Extension | Tamagotchi | WebSocket | 6121 |
 | Tamagotchi | BRAIN | HTTP | 18790 |
 
-Chat and AI always go through **Tamagotchi**; the extension only provides browser context.
+Chat and AI always go through **Tamagotchi** (the avatar); the extension only provides browser context. One avatar, one brain: desktop, Telegram, and browser share the same UNICHAN.
 
 ---
 
