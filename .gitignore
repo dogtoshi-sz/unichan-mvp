@@ -74,3 +74,6 @@ htmlcov/
 # Junk / accidental (Windows reserved name output)
 nul
 NUL
+
+# Private launch/marketing notes (remove this line if you want to commit launchstrat)
+launchstrat

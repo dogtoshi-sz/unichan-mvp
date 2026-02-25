@@ -15,8 +15,8 @@ This guide gets you from zero to a running UNICHAN: Brain, Tamagotchi (avatar), 
 ## 1. Clone and install
 
 ```bash
-git clone <your-unichan-mvp-repo>
-cd UNICHAN-MVP
+git clone https://github.com/dogtoshi-sz/unichan-mvp
+cd unichan-mvp
 pnpm install
 pnpm build:packages   # Build shared packages (run from repo root)
 ```

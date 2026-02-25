@@ -25,7 +25,7 @@ from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit.history import FileHistory
 from prompt_toolkit.patch_stdout import patch_stdout
 
-from nanobot import __version__, __logo__
+from nanobot import __version__, __ascii_banner__, __logo__
 from nanobot.providers.litellm_provider import LiteLLMProvider
 
 app = typer.Typer(
@@ -182,6 +182,12 @@ def main(
 # ============================================================================
 
 
+def _print_ascii_banner() -> None:
+    """Print the UNICHAN ASCII art banner in pink (Rich bright_magenta)."""
+    console.print("[bold bright_magenta]" + __ascii_banner__.strip() + "[/bold bright_magenta]")
+    console.print()
+
+
 @app.command()
 def onboard():
     """Interactive setup wizard: configure AI provider, Telegram, gateway, workspace (no manual config edit)."""
@@ -189,6 +195,8 @@ def onboard():
     from nanobot.config.schema import Config
 
     from questionary import Style
+
+    _print_ascii_banner()
 
     cute_style = Style([
         ("qmark", "fg:#ff69b4 bold"),
@@ -762,6 +770,8 @@ def gateway(
     from nanobot.cron.service import CronService
     from nanobot.cron.types import CronJob
     from nanobot.heartbeat.service import HeartbeatService
+
+    _print_ascii_banner()
     
     if verbose:
         import logging

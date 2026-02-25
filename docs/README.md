@@ -1,6 +1,12 @@
 # UNICHAN Documentation
 
-Welcome to the **UNICHAN MVP** documentation. UNICHAN is a 3-piece AI companion system: a desktop avatar that reacts to you, a lightweight brain that learns and talks to her, and a browser extension so she can see what you see and research the web with you.
+UNICHAN is a 3-piece AI companion: a **desktop avatar** (Tamagotchi), an **AI brain** (BRAIN), and a **Chrome extension** so she can see what you see and research the web with you.
+
+---
+
+## Source code
+
+**[UNICHAN MVP on GitHub](https://github.com/dogtoshi-sz/unichan-mvp)** — Clone, open issues, and contribute.
 
 ---
 
@@ -8,9 +14,9 @@ Welcome to the **UNICHAN MVP** documentation. UNICHAN is a 3-piece AI companion 
 
 | Component | What it is | Role |
 |-----------|------------|------|
-| **Tamagotchi (UNICHAN Avatar)** | Desktop app (Electron) with a Live2D character | Sits on your desktop, reacts to user input, navigates the OpenClaw/nanobot interface, voice, and chat. |
-| **BRAIN** | Lightweight nanobot (Python) | Learns skills, runs the AI, interacts with UNICHAN. HTTP gateway for Tamagotchi and token research for the extension. |
-| **Chrome Extension** | Browser extension (WXT) | Lets UNICHAN interact with the web: see what you see, research links (e.g. Twitter posts, websites), deeper look into pages. |
+| **Tamagotchi (UNICHAN Avatar)** | Desktop app (Electron) with a Live2D character | Sits on your desktop, reacts to you, uses the BRAIN for chat and tools. Voice and screen. |
+| **BRAIN** | Python nanobot | AI gateway: chat, token research, skills. HTTP API on port 18790 for Tamagotchi. |
+| **Chrome Extension** | Browser extension (WXT) | Sends page title, URL, video/subtitles to Tamagotchi so UNICHAN can “see” what you’re browsing. |
 
 ---
 
@@ -24,17 +30,19 @@ Welcome to the **UNICHAN MVP** documentation. UNICHAN is a 3-piece AI companion 
 └─────────────────────┘                           └──────────────────────┘                       └─────────────┘
 ```
 
-- **Extension → Tamagotchi:** Sends browser context (current page, URL, video, subtitles) over WebSocket so the avatar can “see” what you’re browsing.
-- **Tamagotchi → BRAIN:** Sends your messages and context to the nanobot over HTTP; streams replies back and drives the character.
+- **Extension → Tamagotchi:** Browser context over WebSocket (port 6121).
+- **Tamagotchi → BRAIN:** Chat and tools over HTTP (port 18790).
 
-Chat and AI always go through **Tamagotchi**; the extension only provides context. The BRAIN is configured in Tamagotchi (Settings → Unichan), not in the extension.
+Chat and AI always go through **Tamagotchi**. The extension only provides context. Configure the BRAIN in **Settings → Unichan** inside the Tamagotchi app.
 
 ---
 
-## Quick links
+## Documentation index
 
-- [Getting Started](getting-started.md) — Install and run all three pieces.
-- [Tamagotchi (UNICHAN Avatar)](tamagotchi/README.md) — Desktop character, OpenClaw interface, reactions.
-- [BRAIN](brain/README.md) — Nanobot, skills, gateway, config.
-- [Chrome Extension](chrome-extension/README.md) — What the extension sends, how to connect it, research features.
-- [Architecture](architecture.md) — Repo layout and connections.
+| Doc | Description |
+|-----|--------------|
+| [Getting Started](getting-started.md) | Install and run all three pieces step by step. |
+| [Tamagotchi (UNICHAN Avatar)](tamagotchi/README.md) | Desktop character, OpenClaw interface, reactions. |
+| [BRAIN](brain/README.md) | Nanobot, skills, gateway, config. |
+| [Chrome Extension](chrome-extension/README.md) | What the extension sends, setup, research features. |
+| [Architecture](architecture.md) | Repo layout, ports, and data flow. |
