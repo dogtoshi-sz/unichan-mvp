@@ -829,7 +829,7 @@ pages:
       description: Port for the HTTP API (health, chat). Restart "unichan gateway" after changing.
     gatewayUrl:
       label: Brain URL
-      description: "Full URL of the brain on the other machine. Must be http:// (e.g. http://192.168.0.169:18790/v1/). Include /v1/ if your brain uses that path."
+      description: "Full URL of the brain on the other machine. Must be http:// (e.g. http://192.168.1.100:18790/v1/). Replace with your brain machine's IP. Include /v1/ if your brain uses that path."
     gatewayToken:
       label: Gateway token (optional)
       description: "Not needed for local (this computer) — leave empty. For a remote brain, paste the token only if the gateway requires auth (Authorization: Bearer). OpenClaw: dashboard → Overview → Gateway Access → Gateway Token."

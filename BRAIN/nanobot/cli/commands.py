@@ -183,10 +183,11 @@ def main(
 
 
 def _print_ascii_banner() -> None:
-    """Print the UNICHAN ASCII art banner in pink (Rich bright_magenta), with spacing and brain/OpenClaw note."""
+    """Print the UNICHAN ASCII art banner in pink (Rich bright_magenta), with spacing and a short tagline."""
     console.print()  # Extra space between command line and ASCII art
     console.print("[bold bright_magenta]" + __ascii_banner__.strip() + "[/bold bright_magenta]")
-    console.print("[dim]This is the UNICHAN brain (nanobot). You can also connect Tamagotchi to OpenClaw in Settings if you prefer.[/dim]")
+    console.print()
+    console.print("[dim magenta]  UNICHAN brain (nanobot).[/dim magenta] [dim #ffb6c1]Tamagotchi can use this or OpenClaw — set in Settings → Unichan.[/dim #ffb6c1]")
     console.print()
 
 

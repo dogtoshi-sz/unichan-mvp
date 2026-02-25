@@ -334,7 +334,7 @@ onMounted(() => load())
         type="text"
         :label="t('settings.pages.unichan.gatewayUrl.label')"
         :description="t('settings.pages.unichan.gatewayUrl.description')"
-        placeholder="http://192.168.0.169:18790/v1/"
+        placeholder="e.g. http://192.168.1.100:18790/v1/"
       />
       <p class="text-xs text-neutral-500 dark:text-neutral-400">
         {{ t('settings.pages.unichan.brainLocation.chatUsesUrl', { url: resolvedGatewayBaseUrl || '—' }) }}
