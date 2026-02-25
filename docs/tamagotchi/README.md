@@ -35,6 +35,32 @@ All chat and AI go through Tamagotchi. The extension does not talk to the BRAIN 
 
 ---
 
+## Connecting to OpenClaw
+
+Tamagotchi can use **OpenClaw** instead of the UNICHAN brain (nanobot). OpenClaw does not expose the HTTP chat endpoint by default, so you must enable it first.
+
+1. **Enable the HTTP chat endpoint** in OpenClaw’s config:
+   - Open **`~/.openclaw/openclaw.json`** (or `%USERPROFILE%\.openclaw\openclaw.json` on Windows).
+   - Inside the `"gateway"` object, add:
+     ```json
+     "http": {
+       "endpoints": {
+         "chatCompletions": { "enabled": true }
+       }
+     }
+     ```
+   - Save the file, then **restart** the OpenClaw gateway (e.g. `openclaw gateway --port 18789`).
+
+2. **In Tamagotchi:** **Settings → Unichan** — Set gateway URL to `http://localhost:18789/v1/` (or your OpenClaw host and port). Set model to **openclaw** (or `openclaw:main`). Test and Save.
+
+3. **Settings → Consciousness** — Select **OpenClaw (Unichan brain)**.
+
+![Tamagotchi — Consciousness (OpenClaw / Unichan brain)](../../tomigatchi-readme/tomigatchi-conciousness-openclaw.png)
+
+Without step 1, chat will not work even if the OpenClaw gateway is running. See [OpenClaw HTTP API docs](https://docs.openclaw.ai/gateway/openai-http-api). For running Tamagotchi with only OpenClaw (no nanobot) or a minimal repo, see [TAMAGOTCHI/STANDALONE.md](../../TAMAGOTCHI/STANDALONE.md).
+
+---
+
 ## Next
 
 - [Overview](overview.md) — High-level architecture of the Tamagotchi app.

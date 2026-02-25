@@ -34,6 +34,10 @@ unichan onboard   # First-time: setup wizard (API key, workspace)
 unichan gateway   # Start HTTP API on port 18790
 ```
 
+First-time setup runs the **onboard wizard**. You’ll see something like this:
+
+![UNICHAN onboard wizard](../tomigatchi-readme/uni-brain-onboard.png)
+
 Or create `~/.unichan/config.json` manually (see [BRAIN → Installation & Configuration](brain/installation.md)).
 
 Leave the gateway running. Tamagotchi will connect to `http://localhost:18790/v1/`.
@@ -51,10 +55,12 @@ pnpm dev:tamagotchi
 The desktop app opens with the Live2D character. Then:
 
 1. **Settings → Unichan** — Set gateway URL to `http://localhost:18790/v1/` (or your BRAIN URL). Test and Save.
-2. **Settings → Consciousness** — Choose **OpenClaw (Unichan brain)**.
+2. **Settings → Consciousness** — Choose **OpenClaw (Unichan brain)** (works for both the UNICHAN brain and OpenClaw).
 3. Enable voice (mic) if you want to talk to her.
 
 Leave Tamagotchi open. The Chrome extension will connect to it on port **6121** (WebSocket).
+
+**Alternative: Connect Tamagotchi to OpenClaw** — You can use [OpenClaw](https://openclaw.ai) instead of the UNICHAN brain. (1) In OpenClaw’s config `~/.openclaw/openclaw.json`, add under `"gateway"`: `"http": { "endpoints": { "chatCompletions": { "enabled": true } } }`, then restart OpenClaw (e.g. `openclaw gateway --port 18789`). (2) In Tamagotchi: **Settings → Unichan** → set URL to `http://localhost:18789/v1/` (or your OpenClaw host), model **openclaw** → Save. (3) **Settings → Consciousness** → **OpenClaw (Unichan brain)**. See [Tamagotchi → Connecting to OpenClaw](tamagotchi/README.md#connecting-to-openclaw).
 
 ---
 
@@ -90,6 +96,8 @@ In the extension popup:
 - One avatar, one brain: token research, smart buy/sell ideas, and wallet-style management flow through the same UNICHAN.
 
 If the extension shows **Connection error**, Tamagotchi isn’t running or the WebSocket URL is wrong. Fix that and click **Apply** again.
+
+**See it in action:** [Example on a token dashboard (GMGN)](../tomigatchi-readme/example-on-GMGN.png) — UNICHAN spotting trades and giving context-aware warnings. Video: [tomigatchi-example.mp4](../tomigatchi-readme/tomigatchi-example.mp4).
 
 ---
 

@@ -2,6 +2,8 @@
 
 UNICHAN is an **AI avatar** that lives on your **desktop**, in **Telegram**, and in your **browser**. She’s a helpful companion that can spot trades, analyze tokens, and act as a wallet with smart buy/sell management—powered by one brain (BRAIN) and one character (Tamagotchi + Chrome extension).
 
+![UNICHAN intro](../tomigatchi-readme/introimage-github.png)
+
 ---
 
 ## Source code
@@ -33,7 +35,9 @@ UNICHAN is an **AI avatar** that lives on your **desktop**, in **Telegram**, and
 - **Extension → Tamagotchi:** Browser context over WebSocket (port 6121).
 - **Tamagotchi → BRAIN:** Chat and tools over HTTP (port 18790).
 
-Chat and AI always go through **Tamagotchi**. The extension only provides context. Configure the BRAIN in **Settings → Unichan** inside the Tamagotchi app.
+Chat and AI always go through **Tamagotchi**. The extension only provides context. Configure the brain in **Settings → Unichan** inside the Tamagotchi app.
+
+**OpenClaw option:** Tamagotchi can use the UNICHAN brain (nanobot) or **[OpenClaw](https://openclaw.ai)**. To use OpenClaw, enable its HTTP chat endpoint and point Tamagotchi at it — see [Tamagotchi → Connecting to OpenClaw](tamagotchi/README.md#connecting-to-openclaw).
 
 ---
 
@@ -41,6 +45,7 @@ Chat and AI always go through **Tamagotchi**. The extension only provides contex
 
 | Doc | Description |
 |-----|--------------|
+| [**Install steps (with talking points)**](INSTALL-STEPS.md) | Short checklist: gateway (OpenClaw or UNICHAN brain), run gateway, Tamagotchi, build/setup Chrome extension. |
 | [Getting Started](getting-started.md) | Install and run all three pieces step by step. |
 | [Tamagotchi (UNICHAN Avatar)](tamagotchi/README.md) | Desktop character, OpenClaw interface, reactions. |
 | [BRAIN](brain/README.md) | Nanobot, skills, gateway, config. |

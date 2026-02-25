@@ -1,6 +1,6 @@
 # OpenClaw / Nanobot interface
 
-The UNICHAN avatar (Tamagotchi) is built to work with the **OpenClaw / nanobot** stack. The BRAIN is the nanobot gateway; the Tamagotchi is the client.
+The UNICHAN avatar (Tamagotchi) can use either the **UNICHAN brain (nanobot)** or **[OpenClaw](https://openclaw.ai)**. Both expose an OpenAI-compatible HTTP API; Tamagotchi is the client. To connect Tamagotchi to OpenClaw instead of the nanobot, see [Tamagotchi → Connecting to OpenClaw](README.md#connecting-to-openclaw).
 
 ---
 
@@ -16,6 +16,8 @@ The UNICHAN avatar (Tamagotchi) is built to work with the **OpenClaw / nanobot**
 
 - **Gateway URL** — In Tamagotchi: **Settings → Unichan**. Set this to your BRAIN HTTP base URL (e.g. `http://localhost:18790/v1/`). This is the only place you configure the BRAIN for the avatar.
 - **Consciousness** — **Settings → Consciousness → OpenClaw (Unichan brain)** tells the app to use that gateway for chat and tools.
+
+![Consciousness — OpenClaw (Unichan brain)](../../tomigatchi-readme/cinciousness-openclaw.png)
 
 The Chrome extension does **not** connect to the BRAIN. It only sends context to the Tamagotchi; the Tamagotchi then includes that context when calling the BRAIN.
 
