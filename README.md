@@ -49,6 +49,10 @@ unichan onboard   # First time only: API key, workspace
 unichan gateway   # Starts HTTP API on port 18790
 ```
 
+First-time setup runs the **onboard wizard** (AI provider, personality, Telegram, gateway port, workspace, Birdeye). You’ll see something like this:
+
+![UNICHAN setup wizard (unichan onboard)](docs/images/onboard-wizard.png)
+
 Or create `~/.unichan/config.json` manually (see [BRAIN/README.md](BRAIN/README.md) and `BRAIN/config.example.json`).
 
 ### 3. Run Tamagotchi (desktop avatar)
