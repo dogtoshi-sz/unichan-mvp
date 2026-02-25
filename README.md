@@ -16,6 +16,8 @@
 
 **Full documentation:** [docs/README.md](docs/README.md) — getting started, each component, and architecture.
 
+**Buy $UNI (Solana):** [pump.fun/coin/FdK7HCy7MPMnhFaeop7vBW9KW4XKL9DybCMSQ62Ppump](https://pump.fun/coin/FdK7HCy7MPMnhFaeop7vBW9KW4XKL9DybCMSQ62Ppump)
+
 ---
 
 ## Prerequisites
